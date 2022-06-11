@@ -1,0 +1,52 @@
+<section class="container">
+  <div class="pictures">
+    <img class="product-picture" [src]="product?.picture" [alt]="product?.description">
+  </div>
+  <div class="details">
+    <h2>{{ product?.description }}</h2>
+    <p>Item {{ product?.id }}</p>
+    <p>
+      <img class="stars" src=".././assets/images/stars-80-percent.webp" alt="Indicador do índice de aceitação do produto">
+      4.0 (803)
+    </p>
+    <p class="price">
+      {{ product?.price | currency: "BRL"}}
+    </p>
+    <p class="price-detail">(preço por unidadde)</p>
+    <h3>Informações</h3>
+    <div class="product-information">
+      <div class="composition">
+        <h3>Composição</h3>
+        <ul *ngFor="let ingredient of product?.composition">
+          <li>{{ ingredient }}</li>
+        </ul>
+      </div>
+      <div class="allergens">
+        <h3>Alergênicos</h3>
+        <ul *ngFor="let item of product?.allergens">
+          <li>{{ item }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="quantity" *ngIf="product?.stock; else unavailable">
+    <h3>Disponibilidade</h3>
+    <p>Produto disponível para retirada na loja mais perto de você!</p>
+    <h3>Quantidade</h3>
+    <button class="minus-button" (click)="oneLess()">-</button>
+    <input type="text" disabled="true" name="quantity" [(ngModel)]="quantity" min="1" max="{{ product?.stock }}"/>
+    <button class="plus-button" (click)="oneMore()">+</button>
+    <div class="buttons">
+      <button class="add-to-basket-button" type="button" (click)="addToBasket()">Adicionar à Cesta</button>
+      <button class="keep-shopping-button" type="button" routerLink="/products">Continuar Comprando</button>
+      <button class="basket-button" type="button" routerLink="/shopping-basket">Ver minha Cesta</button>
+    </div>
+  </div>
+  <ng-template #unavailable>
+    <div class="unavailable">
+      <h3>Produto indisponível</h3>
+      <img src=".././assets/images/sad-customer.webp" alt="Produto indisponível no momento" />
+      <button routerLink="/products">Ver outros produtos</button>
+    </div>
+  </ng-template>
+</section>

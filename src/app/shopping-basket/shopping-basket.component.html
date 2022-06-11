@@ -1,0 +1,53 @@
+<section class="container" *ngIf="basketProducts.length > 0; else emptyBasket">
+  <div>
+    <h2 class="my-basket">Minha Cesta</h2>
+    <hr>
+    <div>
+      <ul class="items-list">
+        <li class="li-header">
+          <span>Produto</span>
+          <span>Descrição</span>
+          <span>Quantidade</span>
+          <span>Preço</span>
+        </li>
+        <hr>
+        <div *ngFor="let product of basketProducts">
+          <li class="li-item-container">
+            <span class="picture">
+              <img [src]="product.picture" [alt]="product.description" />
+            </span>
+            <span class="description">
+              <p>{{ product.description }}</p>
+              <span class="quantity">
+                <button class="minus-button" (click)="oneLess(product.id)">-</button>
+                <input type="text" disabled="true" min="1" [max]="product.stock" [(ngModel)]="product.quantity" (change)="updateBasketTotal()" />
+                <button class="plus-button" (click)="oneMore(product.id)">+</button>
+                <p>
+                  <a (click)="removeFromBasket(product.id)">remover</a>
+                </p>
+              </span>
+              <p>{{ product.price | currency: "BRL" }} (und)</p>
+            </span>
+          </li>
+          <hr>
+        </div>
+      </ul>
+    </div>
+  </div>
+  <div class="resume">
+    <h2>Resumo</h2>
+    <p>{{ basketProducts.length }} produto(s) </p>
+    <hr>
+    <p class="total">Total: {{ total | currency: "BRL" }}</p>
+    <button routerLink="/products">Continuar comprando</button>
+    <button class="keep-shopping" (click)="finalizePurchase()">Concluir a Compra</button>
+  </div>
+</section>
+<ng-template #emptyBasket>
+  <div class="empty-basket">
+    <h2>Sua Cesta está vazia!</h2>
+    <img src="./assets/images/empty-shopping-basket.webp" alt="Sua Cesta está vazia!" />
+    <br>
+    <button class="keep-shopping" routerLink="/products">Ver Produtos</button>
+  </div>
+</ng-template>

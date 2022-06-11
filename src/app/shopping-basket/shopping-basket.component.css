@@ -1,0 +1,169 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+.items-list {
+  padding-left: 0;
+}
+
+.items-list .li-header {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: left;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.li-header span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.items-list .li-item {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: left;
+  align-items: center;
+}
+
+.li-item-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.li-item-container img {
+  width: 120px;
+  height: 120px;
+  margin-right: 20px;
+}
+
+.li-item-container .description {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.li-item-container .description p {
+  font-size: 18px;
+  margin: 5px 20px;
+}
+
+.li-item-container .description span {
+  margin: 0 20px;
+  text-align: center;
+}
+
+.li-item-container .description input {
+  all: unset;
+  width: 50px;
+  height: 36px;
+  color: darkred;
+  font-weight: bold;
+  text-align: center;
+  background-color: white;
+  margin: 0 5px;
+}
+
+.li-item-container .description button {
+  all: unset;
+  width: 30px;
+  height: 36px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.li-item-container .description .minus-button {
+  color: darkred;
+  background-color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.li-item-container .description .plus-button {
+  color: white;
+  background-color: darkred;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.li-item-container .description .quantity {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.li-item-container .description a, a:visited, a:hover {
+  color: brown;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.total-price,
+.finish {
+  text-align: right;
+}
+
+.resume {
+  margin-top: 20px;
+  background-color: rgba(160, 82, 45, .1);
+  padding: 20px;
+  border: 2px solid sienna;
+  border-radius: 1rem;
+}
+
+.resume p {
+  font-size: 18px;
+}
+
+.resume button {
+  width: 100%;
+  height: 60px;
+  margin-top: 20px;
+  font-size: 20px;
+  color: white;
+  background-color: brown;
+}
+
+.resume .keep-shopping {
+  width: 100%;
+  height: 60px;
+  margin-top: 20px;
+  font-size: 20px;
+  color: brown;
+  background-color: bisque;
+}
+
+.resume .total {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 40px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.empty-basket {
+   text-align: center;
+   height: 300px;
+   padding: 60px;
+ }
+
+ .empty-basket button {
+  width: 50%;
+  height: 60px;
+  margin: 20px 0;
+  font-size: 20px;
+  color: white;
+  background-color: brown;
+}

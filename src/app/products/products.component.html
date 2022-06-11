@@ -1,0 +1,40 @@
+<section>
+  <div class="container" *ngIf="products!.length > 0; else productNotFound">
+    <div class="product" *ngFor="let product of products">
+      <a routerLink="/products/{{ product.id }}">
+        <img [src]="product.picture" [alt]="product.description" />
+        <h2>{{ product.description }}</h2>
+        <p>
+          <img class="stars" src="./assets/images/stars-80-percent.webp" alt="Índice de aceitação do produto">
+          4.0 (803)
+        </p>
+        <p class="price">{{ product.price | currency: "BRL"}}</p>
+        <p>{{ product.paymentTerms}}</p>
+      </a>
+    </div>
+  </div>
+  <ng-template #productNotFound>
+    <div class="product-not-found">
+      <div class="picture">
+        <img src="./assets/images/product-not-found.webp" alt="Produto '{{ description }}' não encontrado">
+        <br>
+        <small>
+          <a href='https://www.freepik.com/vectors/find-icon'>
+            Imagem criada por rawpixel.com - www.freepik.com
+          </a>
+        </small>
+      </div>
+      <div class="text">
+        <h2>Ainda não há produtos que correspondem à sua busca por "{{ description }}"!</h2>
+        <ul>
+          <li>Revise a ortografia da palavra;</li>
+          <li>Utilize palavras mais genéricas ou menos palavras;</li>
+          <li>
+            Navegue pelo menu
+            <a routerLink="/products">"Produtos" </a>
+            para ver todos os items disponíveis.</li>
+        </ul>
+      </div>
+    </div>
+  </ng-template>
+</section>

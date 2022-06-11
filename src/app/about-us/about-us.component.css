@@ -1,0 +1,38 @@
+.container {
+  padding: 60px;
+  font-size: 18px;
+}
+
+.container h2 {
+  font-size: 50px;
+  line-height: 50px;
+  padding-bottom: 20px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.picture {
+  width: 580px;
+  text-align: right;
+  padding-bottom: 30px;
+}
+
+.picture img {
+  width: 100%;
+}
+
+.picture a, a:hover, a:visited {
+  color: black;
+}
+
+.text {
+  width: 580px;
+}
+
+.text p {
+  padding-bottom: 20px;
+}

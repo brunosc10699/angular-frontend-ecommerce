@@ -1,0 +1,22 @@
+body {
+  margin: 0 auto;
+  background-color: tan;
+  color: brown;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
+  color: brown;
+  border: 0px;
+}
+
+li {
+  list-style-type: none;
+  line-height: 15px;
+}
+
+.footer {
+  width: 100%;
+  background-color: brown;
+}

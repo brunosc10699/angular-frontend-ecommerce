@@ -1,0 +1,24 @@
+form {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+input[type="search"] {
+  all: unset;
+  width: 210px;
+  height: 30px;
+  padding: 5px 10px ;
+  font-size: large;
+  outline: none;
+  background-color: white;
+}
+
+button {
+  all: unset;
+  height: 30px;
+  padding: 5px;
+  font-size: large;
+  background-color: white;
+  outline: none;
+  cursor: pointer;
+}

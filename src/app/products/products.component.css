@@ -1,0 +1,104 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+img {
+  width: 100%;
+  height: 225px;
+  border-radius: 1rem;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 500;
+  color: sienna;
+}
+
+a {
+  color: brown;
+  font-weight: 800;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.product {
+  background-color: pink;
+  padding: 20px;
+  border: 10px solid tan;
+  border-radius: 1.5rem;
+  width: 247px;
+}
+
+.product:hover {
+  border: 10px solid brown;
+}
+
+.stars {
+  width: 90px;
+  height: 19px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  all: unset;
+  width: 120px;
+  height: 50px;
+  background-color: bisque;
+  border-radius: 1rem;
+  font-size: 16px;
+  color: darkred;
+  text-align: center;
+}
+
+.product-not-found {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 40px;
+  padding: 30px;
+  background-color: rgba(165, 42, 42, .1);
+}
+
+.product-not-found .picture {
+  width: 200px;
+  height: 140px;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.product-not-found .picture img {
+  width: 150px;
+  height: 100%;
+}
+
+.product-not-found .text {
+  font-size: 18px;
+}
+
+.product-not-found h2 {
+  font-size: 30px;
+  text-align: center;
+}
+
+.product-not-found ul li{
+  list-style-type: square;
+  line-height: 30px;
+  padding-left: 5px;
+}

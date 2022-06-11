@@ -1,0 +1,55 @@
+footer {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.company {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 40px;
+  align-items: center;
+  color: chocolate;
+  font-weight: 900;
+  font-size: medium;
+  height: 250px;
+}
+
+.store {
+  width: 590px;
+  text-align: center;
+}
+
+.social-media {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 590px;
+  text-align: center;
+  padding: 20px;
+}
+
+a {
+  color: beige;
+}
+
+h2 {
+  font-size: x-large;
+}
+
+ul {
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 0;
+}
+
+em {
+  font-size: 40px;
+}
+
+.copyright {
+  padding: 30px;
+  background-color: darkred;
+  text-align: center;
+  color: tan;
+  font-weight: 900;
+}
